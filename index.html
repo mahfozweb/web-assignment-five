@@ -29,7 +29,7 @@
             <!-- heart -->
             <div class="heart flex justify-center items-center bg-[#41ff6b1a]  w-full gap-1 rounded-[15px] p-2">
                <div>
-                <h1>0</h1>
+                <h1 id="heartCount">0</h1>
                </div>
                <div>
                 <img class="h-[20px]" src="./assets/heart.png" alt="">
@@ -38,7 +38,7 @@
             <!-- coin -->
             <div class="coin flex justify-center items-center  w-full bg-[#41ff6b1a] gap-1 rounded-[15px] p-2 ">
                <div>
-                <h1>100</h1>
+                <h1 id="coinCount">100</h1>
                </div>
                <div>
                 <img class="h-[20px] w-[30px]" src="./assets/coin.png" alt="">
@@ -47,7 +47,7 @@
             <!-- copy -->
             <div class="copy flex justify-center items-center  w-full gap-1 bg-[#00a63e] rounded-[15px] p-2">
                <div>
-                <h1>2</h1>
+                <h1 id="copy-count">0</h1>
                </div>
                <div>
                 <p>Copy</p>
@@ -74,38 +74,39 @@
      </div>
 
      <!-- main section -->
+      <main class="bg-[#f5fff6]">
 
-      <main class="bg-[#f5fff6] grid w-11/12 mx-auto py-3  grid-cols-1 gap-2 md:grid-cols-12">
+      <main class=" grid w-11/12 mx-auto py-3  grid-cols-1 gap-2 md:grid-cols-12">
        <section class="grid grid-cols-1 p-2 col-span-9 md:grid-cols-3 gap-10   ">
          <!-- card 1 -->
-        <div class="card-container  px-5 py-2 bg-[#ffffff]">
+        <div class=" card-container  px-5 py-2 bg-[#ffffff] rounded-[10px] ">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class="heartButton btn btn-square ">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
             </div>
             <div class="titile-name">
-                <p>Emergency Number</p>
-                <p>National Emergency</p>
+                <p >Emergency Number</p>
+                <p >National Emergency</p>
             </div>
             <div class="title-number">
                 <p>999</p>
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between  ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e]  ">call</button>
+                <button class="btn btn-copy"><i class="fa-solid fa-copy text-shadow-white"></i>  Copy</button>
+                <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
 
         <!-- card 2 -->
 
-        <div class="card-container border-2 border-red-200 px-5 py-2 bg-[#ffffff]">
+        <div class="  card-container  px-5 py-2 bg-[#ffffff] rounded-[10px]">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class="heartButton btn btn-square">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
@@ -119,17 +120,17 @@
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e] ">Call</button>
+                <button class="btn btn-copy"><i class="fa-solid fa-copy"></i> Copy</button>
+               <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
 
         <!-- card 3 -->
 
-        <div class="card-container border-2 border-red-200 px-5 py-2 bg-[#ffffff]">
+        <div class="  card-container  px-5 py-2 bg-[#ffffff] rounded-[10px]">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class=" heartButton btn btn-square">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
@@ -143,15 +144,15 @@
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e]  ">Call</button>
+               <button class="btn btn-copy"><i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
         <!-- card 4 -->
-          <div class="card-container border-2 border-red-200 px-5 py-2 bg-[#ffffff]">
+          <div class=" card-container  px-5 py-2 bg-[#ffffff] rounded-[10px]">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class="heartButton btn btn-square">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
@@ -165,15 +166,15 @@
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e]  ">Call</button>
+                <button class="btn btn-copy"> <i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
         <!-- card 5 -->
-          <div class="card-container border-2 border-red-200 px-5 py-2 bg-[#ffffff]">
+          <div class="  card-container  px-5 py-2 bg-[#ffffff] rounded-[10px]">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class=" heartButton btn btn-square">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
@@ -187,41 +188,47 @@
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i>Call</button>
+                <button class="btn btn-copy"><i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
         <!-- card 6 -->
-          <div class="card-container border-2 border-red-200 px-5 py-2 bg-[#ffffff]">
+          <div class="  card-container  px-5 py-2 bg-[#ffffff] rounded-[10px]">
             <div class="card-image flex items-center justify-between  ">
                 <img class="h-[30px]" src="./assets/ambulance.png" alt="">
-                <button class="btn btn-square">
+                <button class=" heartButton btn btn-square">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
 </button>
 
             </div>
             <div class="titile-name">
-                <p>Emergency Number</p>
+                <p>Ambulance</p>
                 <p>National Emergency</p>
             </div>
             <div class="title-number">
-                <p>999</p>
+                <p>888</p>
                 <p>All</p>
             </div>
             <div class="card-btn flex justify-between ">
-                <button class="btn">Default</button>
-                <button class="btn bg-[#00a63e]  ">📞 Call</button>
+                <button class="btn btn-copy"><i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="btn-call btn bg-[#00a63e]  "> <i class="fa-solid fa-phone text-white"></i> Call</button>
             </div>
         </div>
        </section>
        <aside class="bg-[#ffffff] col-span-3">
         <div class="history-title flex justify-between p-2">
             <h1><i class="fa-solid fa-clock"></i>  Call History </h1>
-            <button class="btn bg-[#00a63e]  "> Clear</button>
+            <button class="btn bg-[#00a63e]" id="btn-clear"> Clear</button>
         </div>
+        <div class="space-y-5" id="cart-container">
+           
+              
+            </div>
        </aside >
       </main>
+      </main>
+
     
-    
+    <script src="./index.js"></script>
 </body>
 </html>
