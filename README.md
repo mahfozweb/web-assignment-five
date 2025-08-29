@@ -50,25 +50,3 @@ Event delegation is a technique in javascript where you attach a single event li
  - stopPropagation() stops event from reaching parent element.
  
 
-
-
-
-
-
-
-
-
-
-<!-- ## Question 1
-**Q:** What is Java?  
-**A:** Java is a high-level, object-oriented programming language.
-
-## Question 2
-**Q:** What is JVM?  
-**A:** JVM means Java Virtual Machine. It runs Java bytecode.
-
-## Question 3
-**Q:** Difference between JDK and JRE?  
-**A:**  
-- JDK → Java Development Kit (for developers).  
-- JRE → Java Runtime Environment (for running apps). -->

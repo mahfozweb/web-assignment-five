@@ -1,17 +1,4 @@
-                      /***********heart Button  1 *****************/
-
-// const counts = document.getElementById('heartCount')
-// const heartButtons = document.getElementsByClassName("heartButton")
-// for(let i =0 ; i< heartButtons.length; i++ ){
-
-//     heartButtons[i].addEventListener('click', function(){
-//         let countNumber = Number(counts.innerText)
-//         counts.innerText = countNumber+1
-        
-//     })
-
-    
-// }
+ 
 
 /* ****************  heart Button 2 ********************** */
 
@@ -57,11 +44,11 @@ for( let button of getCallButton){
         newCart.innerHTML =`
          <div class = " bg-[#fafafa] space-y-3 flex justify-between p-1" >
             <div class="">
-              <h2> ${titleName}</h2>
-                <h2>${titleNumber}</h2>
+              <h2 class="font-bold"> ${titleName}</h2>
+                <h2 class="text-[#5c5c5c]">${titleNumber}</h2>
             </div>
-            <div>
-              <p>Time: ${callTimes}</p>
+            <div >
+              <p class="text-[#111111] font-semibold">Time: ${callTimes}</p>
             </div>
             </div>
         `
