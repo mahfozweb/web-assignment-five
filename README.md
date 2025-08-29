@@ -48,6 +48,7 @@ Event delegation is a technique in javascript where you attach a single event li
  *Answer:*
  - preventDefault() stops default action .
  - stopPropagation() stops event from reaching parent element.
+ 
 
 
 

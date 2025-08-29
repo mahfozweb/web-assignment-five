@@ -42,19 +42,30 @@ for( let button of getCallButton){
             alert (`${titleName}, ${titleNumber}` )
             let totalCount = Number(currentCoin)-20;
             document.getElementById('coinCount').innerText = totalCount
+
+            /* call time show  **************/
+            
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0' );
+            const minutes = now.getMinutes().toString().padStart(2, '0' );
+            const seconds = now.getSeconds().toString().padStart(2, '0' );
+            const callTimes = `${hours}:${minutes}:${seconds}`;
+
+            /* new cart add */
+
              const newCart = document.createElement('div')
         newCart.innerHTML =`
-         <div class = " bg-[#fafafa] space-y-3" >
-                <h2> ${titleName}</h2>
-            
-            <div>
+         <div class = " bg-[#fafafa] space-y-3 flex justify-between p-1" >
+            <div class="">
+              <h2> ${titleName}</h2>
                 <h2>${titleNumber}</h2>
+            </div>
+            <div>
+              <p>Time: ${callTimes}</p>
             </div>
             </div>
         `
         cartContainer.append(newCart)
-
-
 
 
          }
@@ -63,32 +74,7 @@ for( let button of getCallButton){
          }
 
 
-        // const newCart = document.createElement('div')
-        // newCart.innerHTML =`
-        //  <div class = " bg-[#fafafa] space-y-3" >
-        //         <h2> ${titleName}</h2>
-            
-        //     <div>
-        //         <h2>${titleNumber}</h2>
-        //     </div>
-        //     </div>
-        // `
-        // cartContainer.append(newCart)
-
-
-
-
-        // const currentCoin = document.getElementById('coinCount').innerText
-        // const totalCount = Number(currentCoin)-20;
-        // document.getElementById('coinCount').innerText = totalCount
-
-        // if(totalCount >=20){
-        //     alert (`${titleName}, ${titleNumber}` )
-        // }
-
-        // if (totalCount <20 )  {
-        //     alert('less coin')
-        // }
+      
 
     })
 }
@@ -104,46 +90,29 @@ document.getElementById('btn-clear').addEventListener('click', function(){
 /*  copy button function */
 
  const getCopyButton  = document.getElementsByClassName('btn-copy');
- for(let copy of getCopyButton) {
-    copy.addEventListener('click', function(){
-        alert("copy")
+ for(let copyBtn of getCopyButton) {
+    copyBtn.addEventListener('click', function(){
+
+        /* count and alert  */
         const getCopyCount = document.getElementById('copy-count').innerText
         const currentCount = Number (getCopyCount) +1
         document.getElementById('copy-count').innerText = currentCount
-        // console.log(getCopyCount);
+        alert("copy")
+
+        /* copied area*/
+
+        let titleNumber = copyBtn.parentNode.parentNode.children[2].children[0].innerText
+        const tempInput = document.createElement('textarea')
+        tempInput.value = titleNumber
+        document.body.appendChild(tempInput)  
+        tempInput.select()
+        document.execCommand ('copy')
+        document.body.removeChild(tempInput)
+
+        
         
     })
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* practice traverse */
-
-// const getButton = document.getElementsByClassName('btn-call')
-
-// for ( let button of getButton){
-//     button.addEventListener('click', function(){
-//        let titleName =  button.parentNode.parentNode.children[1].children[0].innerText
-//         let titleNumber = button.parentNode.parentNode.children[2].children[0].innerText
-//         // console.log(titleNumber)
-        
-
-        
-//     })
-// }
-
-
-
 
 
 
